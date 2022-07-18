@@ -1,0 +1,328 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Calibri, sans-serif;
+}
+
+html, body
+{
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	position: relative;
+}
+
+body
+{
+	background-image: url("../img/bg.jpg");
+	background-position: center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+header
+{
+	width: 100%;
+	padding: 20px;
+	text-align: center;
+	font-size: 26px;
+	text-shadow: 10px -2px 14px darkslateblue;
+}
+
+.mainContainer
+{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.tablePlace
+{
+	position: relative;
+}
+
+table, tr, th, td
+{
+	border: 1px solid #000;
+	border-collapse: collapse;
+	font-size: 26px;
+}
+
+th, td
+{
+	padding: 5px 10px;
+	text-align: center;
+}
+
+tr
+{
+	background: #fff;
+}
+
+tr:nth-child(odd)
+{
+	background: #ccc;
+}
+
+tr:first-child
+{
+	background: darkslateblue;
+	color: yellow;
+}
+
+.addBtn
+{
+	position: absolute;
+	right: 0;
+	bottom: calc(100% + 20px);
+}
+
+.addBtn,
+.rowBtn,
+.intoModalBtnMain
+{
+	border: none;
+	outline: none;
+	background: darkslateblue;
+	color: yellow;
+	padding: 5px 10px;
+	font-size: 18px;
+	font-weight: 900;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.addBtn:hover,
+.rowBtn:hover,
+.intoModalBtnMain:hover
+{
+	background: yellow;
+	color: darkslateblue;
+}
+
+.leftNavPanel
+{
+	width: 220px;
+	height: 100%;
+	border-right: 1px solid #000;
+	position: fixed;
+	top: 0;
+	right: 100%;
+	background: darkslateblue;
+	z-index: 2;
+	transition: .4s;
+}
+
+.btnStack
+{
+	width: 100%;
+}
+
+.panelName,
+.navBtn
+{
+	padding: 15px;
+	color: yellow;
+	font-weight: 900;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 1px solid #000;
+	font-size: 19px;
+}
+
+a
+{
+	text-decoration-skip-ink: none;
+}
+
+.panelName span
+{
+	font-size: 30px;
+}
+
+.navBtn:hover
+{
+	transition: .4s;
+	background: yellow;
+	color: darkslateblue;
+	cursor: pointer;
+}
+
+.navBtn:not(:hover)
+{
+	transition: .4s;
+}
+
+.showPanelArrow
+{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 50%;
+	left: 77%;
+	background: darkslateblue;
+	transform: translateY(-50%) rotate(45deg);
+	color: yellow;
+	font-weight: 900;
+	cursor: pointer;
+	transition: .4s;
+}
+
+.showPanelArrow span
+{
+	display: block;
+	position: absolute;
+	top: 19%;
+	right: 7px;
+	transform: rotate(-136deg);
+	font-size: 20px;
+}
+
+.showPanelArrow:hover
+{
+	background: yellow;
+	color: darkslateblue;
+}
+
+.modalArea
+{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, .9);
+	z-index: 10;
+	padding: 0 10px;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+
+.modalSquare
+{
+	width: 100%;
+	max-width: 500px;
+	background: #fff;
+	position: relative;
+	padding: 53px 20px 20px;
+}
+
+.closeCross
+{
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 54px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.closeCross:hover
+{
+	color: red;
+	text-shadow: 0 0 10px red;
+}
+
+.modalNameArea
+{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 9px 0;
+	font-size: 24px;
+	font-weight: 900;
+}
+
+.contentPart
+{
+	display: flex;
+	flex-direction: column;
+}
+
+.info
+{
+	display: flex;
+	justify-content: center;
+}
+
+.labelsPlace,
+.inputsPlace
+{
+	display: flex;
+	flex-direction: column;
+}
+
+.labelsPlace
+{
+	text-align: right;
+	padding-right: 7px;
+}
+
+.input
+{
+	width: 230px;
+	padding: 0 2px;
+	font-size: 24px;
+	outline: none;
+}
+
+.label
+{
+	font-size: 26.6px;
+}
+
+.input:not(:last-child),
+.label:not(:last-child)
+{
+	margin-bottom: 10px;
+}
+
+.label:first-child,
+input[name="itemAmount"]
+{
+	display: none;
+}
+
+.intoModalBtnPlace
+{
+	padding-top: 15px;
+}
+
+.intoModalBtnMain
+{
+	width: 100%;
+}
+
+.actionStatusNotice
+{
+	width: 100%;
+	background: lightgreen;
+	height: 70px;
+	position: absolute;
+	bottom: calc(100% + 15px);
+	left: 0;
+	border-radius: 7px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+	opacity: 0;
+	transition: .4s;
+}
+
+tr.redRow
+{
+	background: brown;
+	color: yellow;
+}
